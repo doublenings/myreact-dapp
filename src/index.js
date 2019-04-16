@@ -13,23 +13,25 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Navbar,Nav } from 'react-bootstrap';
 import Profile from './js/profile'
 
+
+
 const routing = (
-    <Router>
-      <div>
-      <Navbar bg="dark" variant="dark">
+  
+     <Router>
+      
+      {/* <Navbar bg="navbar navbar-light bg-light" variant="navbar navbar-light bg-light">
     <Navbar.Brand href="/">Conference</Navbar.Brand>
-    <Nav classNameName="mr-auto">
+    <Nav className="mr-auto">
       <Nav.Link href="/profile">Home</Nav.Link>
       <Nav.Link href="/upload">Upload</Nav.Link>
       <Nav.Link href="/comment" component ={Comment}>Comment</Nav.Link>
+      <Nav.Link className="form-inline my-2 my-lg-0">Login | {this.StaticRange.account} </Nav.Link>
     </Nav>
-  </Navbar>
+  </Navbar> */}
         <Route exact path="/" component={Profile} />   
         <Route exact path="/profile" component={Profile} />
         <Route path="/upload" component={App} />
         <Route path="/comment" component={Comment} />
-        
-      </div>
     </Router>
   )
 

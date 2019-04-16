@@ -4,6 +4,7 @@ import { Post_List_ABI , Post_List_ADDRESS } from '../contractsJson/config'
 import web3 from '../web3';
 // import PostListContracts from '../json/'
 import '../css/PostList.css'
+import Header from '../js/navbar'
 
 class comment extends Component {
     constructor(props){
@@ -55,6 +56,7 @@ class comment extends Component {
   render() {
     return (
       <div>
+        <Header/>
         <div className="container-fluid">
       <div className="row">
         <main role="main" className="col-lg-12 d-flex justify-content-center">
