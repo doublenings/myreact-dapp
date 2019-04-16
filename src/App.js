@@ -103,42 +103,35 @@ class App extends Component {
           </div>
         </header>
        
-        <div className="card">
-        <div className="card-header">Upload file</div>
-        <div className="card-body">
-        <p>Custom File</p>
-        <from onSubmit={this.onSubmit}>
+        <div className="embed-responsive embed-responsive-16by9">
+              <iframe className="col-lg-12" src={`https://ipfs.io/ipfs/${this.state.ipfsHash}`} allowfullscreen ></iframe>
+            </div>
+             <iframe src={`https://ipfs.io/ipfs/${this.state.ipfsHash}`} alt="Show article pdf"></iframe> */}
+          <Form onSubmit={this.onSubmit}>
               <input
                 type="file"
                 onChange={this.captureFile}
               />
-              <button type="submit" class="btn btn-outline-success">Send it</button>
-            </from>
-             </div>
-             <div className="card-header">Upload file</div>
-        <div className="card-body">
-        <p>Custom File</p>
-        <from onSubmit={this.onSubmit}>
-              <input
-                type="file"
-                onChange={this.captureFile}
-              />
-              <button type="submit" class="btn btn-outline-success">Send it</button>
-            </from>
-             </div>
-             <div className="card-header">Upload file</div>
-        <div className="card-body">
-        <p>Custom File</p>
-        <from onSubmit={this.onSubmit}>
-              <input
-                type="file"
-                onChange={this.captureFile}
-              />
-              <button type="submit" class="btn btn-outline-success">Send it</button>
-            </from>
-             </div>
+              <Button
+                type="submit" id="btn-submit">
+                Send it
+             </Button>
+            </Form> 
+
+          <Button type="submit" onClick={this.onClick}> Get Transaction for Blockchain </Button>
+
+          <ListGroup>
+            <a href={`https://ipfs.io/ipfs/${this.state.ipfsHash}`}> {this.state.ipfsHash}</a>
+          </ListGroup> 
+
+
+
+        <Button type="submit" onClick={this.onClick}> Get Transaction for Blockchain </Button>
+
+        
+           
              
-</div>
+
 <footer>
 		<div class="container">
 			<div class="row">
