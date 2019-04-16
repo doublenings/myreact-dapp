@@ -1,0 +1,20 @@
+main {
+    margin-top: 40px;
+  }
+  .form-control{
+      text-align: left;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding: 20px;
+      
+  }
+  
+  form {
+    
+    padding: 20px;
+  }
+
+  #content {
+    display: none;
+    padding-top: 20px;
+  }
