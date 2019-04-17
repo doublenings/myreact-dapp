@@ -25,3 +25,65 @@ Step 5 : if use "truffle migrate --reset --compile --all" must change address fo
   },
       Go to src/contractsJson/storehash.js
  storehash.js
+    export const ADDRESS = '0xEB82180958BaAc0d2871e21E56EBc299B609125c';
+ 
+ 5.2 Go to build/contracts/comments.json and find
+ comments.json
+ "networks": {
+    "5777": {
+      "events": {
+        "0x05d0fb833127fc08168556d0e7ca9554fc3f6bc843b3b7d2bf1c35aea6bab660": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "content",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "completed",
+              "type": "bool"
+            }
+          ],
+          "name": "TaskCreated",
+          "type": "event",
+          "signature": "0x05d0fb833127fc08168556d0e7ca9554fc3f6bc843b3b7d2bf1c35aea6bab660"
+        },
+        "0xe21fa966ca5cd02748c0752352d18c48165e61cb55b4c29cccf924b5a95fcff1": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "completed",
+              "type": "bool"
+            }
+          ],
+          "name": "TaskCompleted",
+          "type": "event",
+          "signature": "0xe21fa966ca5cd02748c0752352d18c48165e61cb55b4c29cccf924b5a95fcff1"
+        }
+      },
+      "links": {},
+      "address": "0xCB9be804F1AB9a2EB62DC19ADD51aE802Cce71aD",   <-- copy address
+      "transactionHash": "0x16d029538ec6d934804a69cf2da484637ac9ea1d0983ef6fb55b3321d95e70fd"
+    }
+  },
+  
+   Go to src/contractsJson/config.js
+   config.js
+   export const Post_List_ADDRESS = '0xCB9be804F1AB9a2EB62DC19ADD51aE802Cce71aD'
+   
+   Step 6 : npm start and start localhost:3000
+   
+   Note: use "truffle migrate" / "truffle migrate --reset"
