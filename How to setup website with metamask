@@ -1,0 +1,27 @@
+Step 1 : download zip and clone folder.
+Step 2 : Check truffle-config.js file 
+  2.1 see network must use 127.0.0.1/8545
+  networks: {
+    development: {
+     host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+     },
+  },
+Step 3 : Open ganache program download: https://truffleframework.com/ganache
+  3.1 Open ganache -> cilck settings -> server -> change port from 7545 to 8545
+Step 4 : Open folder was download Go to Code editor
+Step 5 : if use "truffle migrate --reset --compile --all" must change address for ethereum blockchain only!!
+  5.1 "truffle migrate --reset --compile --all" 
+       Go to build/contracts/storeipfs.json and find  
+ storeipfs.json 
+       "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xEB82180958BaAc0d2871e21E56EBc299B609125c",  <- copy address
+      "transactionHash": "0x7cc6cf6aeddf38cf31592cccef1ee57aa071de9eb4ad3120a864873b1dbf10ed"
+    }
+  },
+      Go to src/contractsJson/storehash.js
+ storehash.js
