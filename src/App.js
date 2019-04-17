@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import { Button, Form, ListGroup,ResponsiveEmbed } from 'react-bootstrap'
+import { Form, ListGroup} from 'react-bootstrap'
 import web3 from './web3';
 import ipfs from './js/ipfs';
 import storehash from './contractsJson/storehash';
 import Header from './js/navbar'
 import "./css/App.css"
-import "./css/profile.css"
 import Comment from './js/comment'
 
-// import truffleContract from 'truffle-contract';
-// import IPFSimageContract from './StorageIpfs.json'
 
 class App extends Component {
   constructor(props) {
@@ -24,6 +21,7 @@ class App extends Component {
       txReceipt: '',
       account: '',
     }
+    
     // this.createList = this.createList.bind(this)
   }
 
@@ -56,13 +54,13 @@ class App extends Component {
     catch (error) {
       console.log(error);
     } //catch
-  } //onClick
+  } 
+  
   onSubmit = async (event) => {
     event.preventDefault();
     //bring in user's metamask account address
     const accounts = await web3.eth.getAccounts();
     this.setState({ account: accounts[0] })
-    console.log('Sending from Metamask account: ' + accounts[0]);
     //obtain contract address from storehash.js
     const ethAddress = await storehash.options.address;
     this.setState({ ethAddress });
@@ -76,7 +74,6 @@ class App extends Component {
       storehash.methods.sendHash(this.state.ipfsHash).send({
         from: accounts[0]
       }, (error, transactionHash) => {
-        console.log(transactionHash);
         this.setState({ transactionHash });
       }); //storehash 
     }) //await ipfs.add 
@@ -88,7 +85,8 @@ class App extends Component {
   render() {
     return (
       <div >
-        <header id="intro"><Header />
+        <header id="intro">
+          <Header />
           <div className="container">
             <div className="table">
               <div className="header-text">
@@ -102,15 +100,20 @@ class App extends Component {
               </div>
             </div>
           </div>
-        </header>  
-        <div className="card">
-        <div className= "card-header">Step1 : Login for upload file</div>
-        <div className= "card-body"> Login as {this.state.account}</div>
-        </div>     
-        <div className="card">
+        </header>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 col-md-12">
+              <div className="card">
+                <div className="card-header">Step1 : Login for upload file</div>
+                <div className="card-body"> Login as {this.state.account}</div>
+              </div>
+            </div>
+          </div>
+          <br></br>
+          <div className="card">
         <div className="card-header">Step:2 Upload files</div>
         <div className="card-body">
-         
         <div className="upload-file">
   {/* <ResponsiveEmbed aspect="1by1">
     <embed type="image/svg+xml" src={`https://ipfs.io/ipfs/${this.state.ipfsHash}`} />
@@ -121,15 +124,13 @@ class App extends Component {
                 type="file"
                 onChange={this.captureFile}
               />
-              <Button
-                type="submit" id="btn-submit">
+              <button
+                type="submit" className="btn-send">
                 Send it
-             </Button>
-           
+             </button>
             </Form> 
-             <Button type="submit" id="btn-submit" onClick={this.onClick}>Get Transaction</Button>
+             {/* <button type="submit" className="btn-transaction" onClick={this.onClick}>Get Transaction</button> */}
              </div> 
-             
              <div className= "card-header">File is uploaded!</div>
              <div className="card-body">
           <ListGroup>  
@@ -137,54 +138,48 @@ class App extends Component {
           </ListGroup>
           </div>  
           </div>
-         
-             
-        
-        <div className="card">
-        <div className="card-header">Step3 : Review file</div>
-        <div className="card-body">
-        <Comment/>
+          <br></br>
+          <Comment />
         </div>
-        </div>     
-<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 text-center-mobile">
-					<h3 class="white">Reserve a Free Trial Class!</h3>
-					<h5 class="light regular light-white">Shape your body and improve your health.</h5>
-					<a href="#" class="btn btn-blue ripple trial-button">Start Free Trial</a>
-				</div>
-				<div class="col-sm-6 text-center-mobile">
-					<h3 class="white">Opening Hours <span class="open-blink"></span></h3>
-					<div class="row opening-hours">
-						<div class="col-sm-6 text-center-mobile">
-							<h5 class="light-white light">Mon - Fri</h5>
-							<h3 class="regular white">9:00 - 22:00</h3>
-						</div>
-						<div class="col-sm-6 text-center-mobile">
-							<h5 class="light-white light">Sat - Sun</h5>
-							<h3 class="regular white">10:00 - 18:00</h3>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row bottom-footer text-center-mobile">
-				<div class="col-sm-8">
-					<p>&copy; 2015 All Rights Reserved. Powered by <a href="http://www.phir.co/">PHIr</a> exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></p>
-				</div>
-				<div class="col-sm-4 text-right text-center-mobile">
-					<ul class="social-footer">
-						<li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="http://www.twitter.com/codrops"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="https://plus.google.com/101095823814290637419"><i class="fa fa-google-plus"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</footer>
-</div>
-      
+
+        <footer>
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-6 text-center-mobile">
+                <h3 className="white">Reserve a Free Trial Class!</h3>
+                <h5 className="light regular light-white">Shape your body and improve your health.</h5>
+              </div>
+              <div className="col-sm-6 text-center-mobile">
+                <h3 className="white">Opening Hours <span className="open-blink"></span></h3>
+                <div className="row opening-hours">
+                  <div className="col-sm-6 text-center-mobile">
+                    <h5 className="light-white light">Mon - Fri</h5>
+                    <h3 className="regular white">9:00 - 22:00</h3>
+                  </div>
+                  <div className="col-sm-6 text-center-mobile">
+                    <h5 className="light-white light">Sat - Sun</h5>
+                    <h3 className="regular white">10:00 - 18:00</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row bottom-footer text-center-mobile">
+              <div className="col-sm-8">
+                <p>&copy; 2015 All Rights Reserved. Powered by <a href="http://www.phir.co/">PHIr</a> exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></p>
+              </div>
+              <div className="col-sm-4 text-right text-center-mobile">
+                <ul className="social-footer">
+                  <li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i className="fa fa-facebook"></i></a></li>
+                  <li><a href="http://www.twitter.com/codrops"><i className="fa fa-twitter"></i></a></li>
+                  <li><a href="https://plus.google.com/101095823814290637419"><i className="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+
     );
-  } 
-} 
+  }
+}
 export default App;

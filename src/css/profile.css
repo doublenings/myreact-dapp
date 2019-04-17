@@ -306,7 +306,7 @@ section {
 	margin: 0 10px;
 }
 
-Buttons
+
 
 .btn {
 	font-size: 18px;
@@ -325,7 +325,7 @@ Buttons
 	color: white;
 }
 
-.btn.btn-blue {
+/* .btn.btn-blue {
 	background: #00a8ff;
 }
 
@@ -342,7 +342,7 @@ Buttons
 .btn.btn-blue-fill:hover {
 	color: white;
 	background: #00a8ff;
-}
+} */
 
 .btn.btn-white-fill {
 	color: #fff;

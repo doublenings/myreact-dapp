@@ -17,12 +17,9 @@ class Header extends Component {
       }
     
       async loadBlockchainData(){
-        const network = await web3.eth.net.getNetworkType()
         const accounts = await web3.eth.getAccounts()
         this.setState({account: accounts[0]})
-        console.log("accounts",accounts[0])
-        console.log("network:",network)
-   
+       
       }
 
     render() {

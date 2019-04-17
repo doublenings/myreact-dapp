@@ -1,4 +1,4 @@
-export const Post_List_ADDRESS = '0x617bb19f76cf07B55e0b618228D6249A66FA5395'
+export const Post_List_ADDRESS = '0xCB9be804F1AB9a2EB62DC19ADD51aE802Cce71aD'
 
 export const Post_List_ABI = [
     {

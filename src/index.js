@@ -8,7 +8,6 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
-import Comment from './js/comment'
 import 'bootstrap/dist/css/bootstrap.css';
 import Profile from './js/profile'
 
