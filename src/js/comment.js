@@ -56,7 +56,6 @@ class comment extends Component {
   render() {
     return (
       <div>
-        <Header/>
         <div className="container-fluid">
       <div className="row">
         <main role="main" className="col-lg-12 d-flex justify-content-center">

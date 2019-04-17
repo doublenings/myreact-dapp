@@ -33,8 +33,8 @@ class Header extends Component {
              <Nav className="mr-auto">
                     <Nav.Link href="/profile">Home</Nav.Link>
                <Nav.Link href="/upload">Upload</Nav.Link>
-                <Nav.Link href="/comment" component ={Comment}>Comment</Nav.Link>
-                    <Nav.Link className="form-inline my-2 my-lg-0">Login as | {this.state.account} </Nav.Link>
+               
+                    <Nav.Link className="justify-content-end">Login as | {this.state.account} </Nav.Link>
                   </Nav>
                 </Navbar> 
                 

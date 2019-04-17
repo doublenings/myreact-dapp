@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { Button, Form, Row, Container, Col, Table, ListGroup } from 'react-bootstrap'
-
+import { Button, Form, ListGroup,ResponsiveEmbed } from 'react-bootstrap'
 import web3 from './web3';
 import ipfs from './js/ipfs';
 import storehash from './contractsJson/storehash';
 import Header from './js/navbar'
 import "./css/App.css"
 import "./css/profile.css"
+import Comment from './js/comment'
+
 // import truffleContract from 'truffle-contract';
 // import IPFSimageContract from './StorageIpfs.json'
 
@@ -101,13 +102,21 @@ class App extends Component {
               </div>
             </div>
           </div>
-        </header>
-       
-        <div className="embed-responsive embed-responsive-16by9">
-              <iframe className="col-lg-12" src={`https://ipfs.io/ipfs/${this.state.ipfsHash}`} allowfullscreen ></iframe>
-            </div>
-             <iframe src={`https://ipfs.io/ipfs/${this.state.ipfsHash}`} alt="Show article pdf"></iframe> */}
-          <Form onSubmit={this.onSubmit}>
+        </header>  
+        <div className="card">
+        <div className= "card-header">Step1 : Login for upload file</div>
+        <div className= "card-body"> Login as {this.state.account}</div>
+        </div>     
+        <div className="card">
+        <div className="card-header">Step:2 Upload files</div>
+        <div className="card-body">
+         
+        <div className="upload-file">
+  {/* <ResponsiveEmbed aspect="1by1">
+    <embed type="image/svg+xml" src={`https://ipfs.io/ipfs/${this.state.ipfsHash}`} />
+  </ResponsiveEmbed> */}
+</div> 
+         <Form onSubmit={this.onSubmit}>
               <input
                 type="file"
                 onChange={this.captureFile}
@@ -116,22 +125,27 @@ class App extends Component {
                 type="submit" id="btn-submit">
                 Send it
              </Button>
-            </Form> 
-
-          <Button type="submit" onClick={this.onClick}> Get Transaction for Blockchain </Button>
-
-          <ListGroup>
-            <a href={`https://ipfs.io/ipfs/${this.state.ipfsHash}`}> {this.state.ipfsHash}</a>
-          </ListGroup> 
-
-
-
-        <Button type="submit" onClick={this.onClick}> Get Transaction for Blockchain </Button>
-
-        
            
+            </Form> 
+             <Button type="submit" id="btn-submit" onClick={this.onClick}>Get Transaction</Button>
+             </div> 
              
-
+             <div className= "card-header">File is uploaded!</div>
+             <div className="card-body">
+          <ListGroup>  
+            <ListGroup.Item><a href={`https://ipfs.io/ipfs/${this.state.ipfsHash}`}> {this.state.ipfsHash} </a></ListGroup.Item>
+          </ListGroup>
+          </div>  
+          </div>
+         
+             
+        
+        <div className="card">
+        <div className="card-header">Step3 : Review file</div>
+        <div className="card-body">
+        <Comment/>
+        </div>
+        </div>     
 <footer>
 		<div class="container">
 			<div class="row">

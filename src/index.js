@@ -10,7 +10,6 @@ import * as serviceWorker from './serviceWorker';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import Comment from './js/comment'
 import 'bootstrap/dist/css/bootstrap.css';
-import { Navbar,Nav } from 'react-bootstrap';
 import Profile from './js/profile'
 
 
@@ -31,7 +30,7 @@ const routing = (
         <Route exact path="/" component={Profile} />   
         <Route exact path="/profile" component={Profile} />
         <Route path="/upload" component={App} />
-        <Route path="/comment" component={Comment} />
+        
     </Router>
   )
 

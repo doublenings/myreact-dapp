@@ -96,3 +96,9 @@ footer .social-footer li:hover a {
 	padding-top: 20px;
 
 }
+.upload-file{
+	align-content: center;
+	background-color: gainsboro;
+	width: 300px;
+	height: auto;
+}
