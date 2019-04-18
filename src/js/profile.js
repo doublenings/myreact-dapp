@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import web3 from '../web3'
-//import { Navbar,Nav } from 'react-bootstrap';
 import Header from '../js/navbar'
 import '../css/profile.css'
 import dolnapa from '../img/dolnapa.png';
