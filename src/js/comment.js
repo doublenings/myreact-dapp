@@ -4,6 +4,7 @@ import { Post_List_ABI , Post_List_ADDRESS } from '../contractsJson/config'
 import web3 from '../web3';
 // import PostListContracts from '../json/'
 import '../css/PostList.css'
+import $ from "jquery";
 
 
 class comment extends Component {
@@ -13,11 +14,17 @@ class comment extends Component {
           account: '',
           taskCount: 0,
           tasks: [],
-          loading : true
+          loading : false
         }
         this.createTask = this.createTask.bind(this)
   }
 
+  componentDidMount(){
+    this.setState({
+      loading : true
+
+    })
+  }
   componentWillMount(){
     this.loadBlockchainData()
   }
@@ -41,7 +48,8 @@ class comment extends Component {
         })
       }
      console.log("tasks:" , this.state.tasks)
-     this.setState({ loading : false})
+     this.setState({ loading: false })
+    
   }
 
   createTask(content) {
@@ -49,23 +57,36 @@ class comment extends Component {
     this.state.PostList.methods.createTask(content).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
+      window.location.reload()
     })
   }
+
+  // setLoading( boolean ) {
+  // const loader = $('#loader')
+  // const content = $('#content')
+  // if(boolean) {
+  //   loader.show()
+  //   content.hide()
+  // }else {
+  //   loader.hide()
+  //   content.show()
+  // }
+  // }
+
 
   render() {
     return (
       <div className="card">
       <div className="card-header">Step3 : Review file</div>
         <div className="card-body">
-          { this.state.loading ? 
+          { this.state.loading ?
           <div id="loader" className="text-center">
             <p className="text-center">Loading...</p>
           </div>  
+          
           : <PostList 
              tasks = {this.state.tasks} 
              createTask={this.createTask} 
-            loading = {this.state.loading}
-           
              />  }
         </div>
         </div>
