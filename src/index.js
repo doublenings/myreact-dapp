@@ -28,6 +28,7 @@ const routing = (
   </Navbar> */}
         <Route exact path="/" component={Profile} />   
         <Route exact path="/profile" component={Profile} />
+        
         <Route path="/upload" component={App} />
         
     </Router>

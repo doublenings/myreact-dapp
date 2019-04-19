@@ -14,17 +14,11 @@ class comment extends Component {
           account: '',
           taskCount: 0,
           tasks: [],
-          loading : false
+          loading : true
         }
         this.createTask = this.createTask.bind(this)
   }
 
-  componentDidMount(){
-    this.setState({
-      loading : true
-
-    })
-  }
   componentWillMount(){
     this.loadBlockchainData()
   }
@@ -49,29 +43,16 @@ class comment extends Component {
       }
      console.log("tasks:" , this.state.tasks)
      this.setState({ loading: false })
-    
   }
-
   createTask(content) {
     this.setState({ loading: true })
     this.state.PostList.methods.createTask(content).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
-      window.location.reload()
     })
   }
 
-  // setLoading( boolean ) {
-  // const loader = $('#loader')
-  // const content = $('#content')
-  // if(boolean) {
-  //   loader.show()
-  //   content.hide()
-  // }else {
-  //   loader.hide()
-  //   content.show()
-  // }
-  // }
+  
 
 
   render() {
@@ -79,11 +60,10 @@ class comment extends Component {
       <div className="card">
       <div className="card-header">Step3 : Review file</div>
         <div className="card-body">
-          { this.state.loading ?
-          <div id="loader" className="text-center">
+          { this.state.loading 
+          ?<div id="loader" className="text-center">
             <p className="text-center">Loading...</p>
           </div>  
-          
           : <PostList 
              tasks = {this.state.tasks} 
              createTask={this.createTask} 

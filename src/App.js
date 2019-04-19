@@ -6,6 +6,7 @@ import storehash from './contractsJson/storehash';
 import Header from './js/navbar'
 import "./css/App.css"
 import Comment from './js/comment'
+import {Button ,Link} from 'react-bootstrap'
 
 
 class App extends Component {
@@ -79,6 +80,11 @@ class App extends Component {
     }) //await ipfs.add 
   }; //onSubmit
 
+  openFiles = async (event) => {
+    console.log('cilck me')
+    
+  }
+
   // createList(ipfsHash){
   //   this.state.App.methods.createList(ipfsHash).send({  from: this.state.account })
   // }
@@ -124,10 +130,10 @@ class App extends Component {
                 type="file"
                 onChange={this.captureFile}
               />
-              <button
-                type="submit" className="btn-send">
+              <Button
+                type="submit"  variant="success">
                 Send it
-             </button>
+             </Button>
             </Form> 
              {/* <button type="submit" className="btn-transaction" onClick={this.onClick}>Get Transaction</button> */}
              </div> 
@@ -139,7 +145,9 @@ class App extends Component {
           </div>  
           </div>
           <br></br>
+          
           <Comment />
+          <Button variant= "info" onClick={this.openFiles}>Comment</Button>
         </div>
 
         <footer>
