@@ -3,6 +3,12 @@ import '../css/PostList.css';
 import { Form } from 'react-bootstrap';
 
 class PostList extends Component {
+  constructor(props){
+    super(props)
+    this.state= {
+      loading: true
+    }
+  } 
 
   
   render() {
@@ -22,7 +28,7 @@ class PostList extends Component {
               {this.props.tasks.map((task, key) => {
                 return (
                   <div className="taskTemplate" key={key}  >
-                    <div className="content">{task.content} </div>
+                    <div className="content">{task.content} {task.loading}</div>
                    
                   </div>
                 )
