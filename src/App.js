@@ -6,8 +6,8 @@ import storehash from './contractsJson/storehash';
 import Header from './js/navbar'
 import "./css/App.css"
 import Comment from './js/comment'
-import {Button ,Link} from 'react-bootstrap'
-
+import {Button } from 'react-bootstrap'
+import line from './img/line.png';
 
 class App extends Component {
   constructor(props) {
@@ -150,41 +150,34 @@ class App extends Component {
           <Button variant= "info" onClick={this.openFiles}>Comment</Button>
         </div>
 
-        <footer>
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-6 text-center-mobile">
-                <h3 className="white">Reserve a Free Trial Class!</h3>
-                <h5 className="light regular light-white">Shape your body and improve your health.</h5>
-              </div>
-              <div className="col-sm-6 text-center-mobile">
-                <h3 className="white">Opening Hours <span className="open-blink"></span></h3>
-                <div className="row opening-hours">
-                  <div className="col-sm-6 text-center-mobile">
-                    <h5 className="light-white light">Mon - Fri</h5>
-                    <h3 className="regular white">9:00 - 22:00</h3>
-                  </div>
-                  <div className="col-sm-6 text-center-mobile">
-                    <h5 className="light-white light">Sat - Sun</h5>
-                    <h3 className="regular white">10:00 - 18:00</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row bottom-footer text-center-mobile">
-              <div className="col-sm-8">
-                <p>&copy; 2015 All Rights Reserved. Powered by <a href="http://www.phir.co/">PHIr</a> exclusively for <a href="http://tympanus.net/codrops/">Codrops</a></p>
-              </div>
-              <div className="col-sm-4 text-right text-center-mobile">
-                <ul className="social-footer">
-                  <li><a href="http://www.facebook.com/pages/Codrops/159107397912"><i className="fa fa-facebook"></i></a></li>
-                  <li><a href="http://www.twitter.com/codrops"><i className="fa fa-twitter"></i></a></li>
-                  <li><a href="https://plus.google.com/101095823814290637419"><i className="fa fa-google-plus"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
+  <footer>
+		<div className="container">
+			<div className="row">
+
+				<div className="col-sm-6 text-center-mobile">
+					<h3 className="white">ช่องทางการติดต่อ</h3>
+					<img src={line}/>
+					<h5 className="light-white light">มหาวิทยาลัยศรีนครินทรวิโรฒ </h5>
+					<h5 className="light-white light">114 สุขุมวิท 23, กรุงเทพฯ 10110, ประเทศไทย.</h5>
+					<h5 className="light-white light">โทรศัพท์ 02-649-5000, Fax 02-258-4007 </h5>
+          <p>&copy; 2019 All Rights Reserved.</p>    	
+				</div>
+				<div className="col-sm-6 text-center-mobile">
+					<h3 className="white">เวลาทำการ <span className="open-blink"></span></h3>
+					<div className="row opening-hours">
+						<div className="col-sm-6 text-center-mobile">
+							<h5 className="light-white light">จันทร์ - ศุกร์</h5>
+							<h3 className="regular white">9:00 - 18:00</h3>
+						</div>
+						<div className="col-sm-6 text-center-mobile">
+							<h5 className="light-white light">เสาร์ - อาทิตย์</h5>
+							<h3 className="regular white">10:00 - 18:00</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
       </div>
 
     );

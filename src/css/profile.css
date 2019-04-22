@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Kodchasan);
 body {
-	font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', 'Kodchasan', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	overflow-x: hidden;
 	color: #2a3237;
@@ -19,9 +20,10 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto', 'Kodchasan', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	position: relative;
-	margin: 10px 0;
+  margin: 10px 0;
+  
 }
 
 h1 {
@@ -37,7 +39,7 @@ h3 {
 }
 
 h4 {
-	font-size: 24px;
+	font-size: 22px;
 }
 
 h5 {
@@ -86,7 +88,7 @@ header {
 
 #intro h2 {
   color: #1A237E;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Kodchasan', sans-serif;
   font-size: 56px;
   font-weight: 600;
   text-transform: uppercase;
@@ -94,7 +96,7 @@ header {
 
 #intro h3 {
   color:black;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Kodchasan', sans-serif;
   font-size: 40px;
   font-weight: 600;
   text-transform: uppercase;
@@ -102,10 +104,33 @@ header {
 
 #intro h4 {
   color: black;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Kodchasan', sans-serif;
   font-size: 28px;
   font-weight: 600;
-} 
+}
+
+#btn-upload {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 10px;
+  color: #fff;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  background: #1A237E;
+  
+}
+
+#btn-upload:hover {
+  background: #2980B9;
+  color: #fff;
+}
 
 header .table {
 	display: table;
@@ -177,7 +202,7 @@ section {
 	width: 0;
 	height: 0;
 	border-bottom: 80px solid transparent;
-	border-left: 30px solid white;
+  border-left: 30px solid white;
 }
 
 .intro-tables {
@@ -207,7 +232,7 @@ section {
 #box1 {
   -webkit-transition: background-image 0.3s ease, background-position 0.3s;
 	transition: background-image 0.3s ease, background-position 0.3s;
-  background-image: url('../img/bitcoin.jpg');
+  background-image: url('../img/bitcoin-2.jpg');
 }
 
 #box1:hover {
@@ -217,7 +242,7 @@ section {
 #box2 {
   -webkit-transition: background-image 0.3s ease, background-position 0.3s;
 	transition: background-image 0.3s ease, background-position 0.3s;
-  background-image: url('../img/dapp.jpg');
+  background-image: url('../img/react.png');
 }
 
 #box2:hover {
@@ -227,7 +252,7 @@ section {
 #box3 {
   -webkit-transition: background-image 0.3s ease, background-position 0.3s;
 	transition: background-image 0.3s ease, background-position 0.3s;
-  background-image: url('../img/ethereum.jpg');
+  background-image: url('../img/bigdata.jpg');
 }
 
 #box3:hover {
@@ -831,7 +856,7 @@ Buttons
 
 /* Footer */
 footer {
-	padding: 140px 0 40px;
+	padding: 40px 0 40px;
 	background: url('../img/footer.jpg');
 	-webkit-background-size: cover;
   background-size: cover;
@@ -881,25 +906,6 @@ footer .bottom-footer {
 	margin-top: 150px;
 }
 
-footer .social-footer {
-	padding: 0;
-	list-style: none;
-}
-
-footer .social-footer li {
-	display: inline-block;
-	margin: 0 10px;
-}
-
-footer .social-footer li a {
-	font-size: 24px;
-	color: #fff;
-}
-
-footer .social-footer li:hover a {
-	color: #00a8ff;
-}
-
 /* F.A.Q */
 #faq {
   color: #1A237E;
@@ -930,22 +936,23 @@ footer .social-footer li:hover a {
   color: #868e96;
 }
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
     font-size: 30px;
   }
-}
+} */
 
 /* Timeline */
 #timeline {
   color: #1A237E;
-  /* font-family: 'Roboto', sans-serif; */
+}
+
+#timelind-head {
+  font-weight: 600;
 }
 
 #timeline h4 {
   color: #1A237E;
-  font-size: 28px;
- 
 }
 
 #timeline p {
