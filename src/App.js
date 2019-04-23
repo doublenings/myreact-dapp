@@ -4,7 +4,7 @@ import web3 from './web3';
 import ipfs from './js/ipfs';
 import storehash from './contractsJson/storehash';
 import Header from './js/navbar'
-import "./css/App.css"
+import './css/App.css'
 import Comment from './js/comment'
 import {Button } from 'react-bootstrap'
 import line from './img/line.png';
@@ -91,10 +91,9 @@ class App extends Component {
   render() {
     return (
       <div >
-        <header id="intro">
+       
           <Header />
-          <div className="container">
-            <div className="table">
+          <div id="header-upload">
               <div className="header-text">
                 <div className="row">
                   <div className="col-md-12 text-center">
@@ -104,9 +103,10 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </header>
+       </div>
+       
+       <div className= "bg-light gray-bg">
+       <br />
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12">
@@ -116,7 +116,8 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <br></br>
+  
+         <br />
           <div className="card">
         <div className="card-header">Step:2 Upload files</div>
         <div className="card-body">
@@ -148,6 +149,8 @@ class App extends Component {
           
           <Comment />
           <Button variant= "info" onClick={this.openFiles}>Comment</Button>
+          </div>
+          <br />
         </div>
 
   <footer>

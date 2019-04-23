@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import web3 from '../web3'
 import Header from '../js/navbar'
 import '../css/profile.css'
+import tamonwan from '../img/tamonwan.png'
 import dolnapa from '../img/dolnapa.png';
 import line from '../img/line.png';
 import { Redirect } from 'react-router-dom';
@@ -44,13 +45,14 @@ class profile extends Component {
     render() {
       return (  
         <div >
-          <header id="intro"><Header/>
+          <header id="intro">
+		  <Header/>
 		  			<div className="container">
 							<div className="table">
 								<div className="header-text">
 									<div className="row">
 										<div className="col-md-12 text-center">
-											<h3 className="light white">การอบรมครั้งที่ 1</h3>
+											<h3 className="light white">การสัมมนาครั้งที่ 1</h3>
 											<h2 className="white typed">บล็อกเชน...เทคโนโลยีเปลี่ยนโลก</h2>
 											<h3 className="light white">1 พฤษภาคม 2562 </h3>
                     	<h4 className="light white"> @ มหาวิทยาลัยศรีนครินทรวิโรฒ </h4><br />
@@ -218,7 +220,7 @@ class profile extends Component {
         
         		<div className="col-lg-6">
           		<div className="testimonial-item mx-auto mb-5 mb-lg-0">
-							<img src={dolnapa} width="250" height="250"/>
+							<img src={tamonwan} width="250" height="250"/>
             		<h4>น.ส.ธมลวรรณ รังผึ้้ง</h4>
             		<p className="font-weight-light mb-0">Email : tamonwan.ning@g.swu.ac.th</p>
 								<p className="font-weight-light mb-0">Phone : 064-603-6289</p>

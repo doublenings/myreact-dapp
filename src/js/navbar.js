@@ -29,7 +29,7 @@ class Header extends Component {
                   <Navbar.Brand href="/">Conference</Navbar.Brand>
              <Nav className="mr-auto">
                     <Nav.Link href="/profile">Home</Nav.Link>
-               <Nav.Link href="/upload">Upload</Nav.Link>
+               
                
                     <Nav.Link className="justify-content-end">Login as | {this.state.account} </Nav.Link>
                   </Nav>
