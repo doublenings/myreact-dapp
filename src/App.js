@@ -148,7 +148,7 @@ class App extends Component {
           <br></br>
           
           <Comment />
-          <Button variant= "info" onClick={this.openFiles}>Comment</Button>
+          <Button variant= "info" onShow={this.openFiles}>Comment:  {this.state.ipfsHash} </Button>
           </div>
           <br />
         </div>

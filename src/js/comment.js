@@ -17,6 +17,7 @@ class comment extends Component {
           loading : true
         }
         this.createTask = this.createTask.bind(this)
+    
   }
 
   componentWillMount(){
@@ -41,16 +42,27 @@ class comment extends Component {
           tasks: [...this.state.tasks, task]
         })
       }
+      
      console.log("tasks:" , this.state.tasks)
      this.setState({ loading: false })
   }
-  createTask(content) {
+  createTask = async()=>{
+    const content = $('#newTask').val()
+    const text = $('#newTask2').val()
     this.setState({ loading: true })
     this.state.PostList.methods.createTask(content).send({ from: this.state.account })
+    this.state.PostList.methods.createTask(text).send({ from: this.state.account })
+    // this.state.PostList.methods.createTask(comment).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
     })
+    
+    
+    
+    
   }
+
+ 
 
   
 
@@ -67,6 +79,7 @@ class comment extends Component {
           : <PostList 
              tasks = {this.state.tasks} 
              createTask={this.createTask} 
+             
              />  }
         </div>
         </div>
