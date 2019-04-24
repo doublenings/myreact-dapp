@@ -23,6 +23,7 @@ class comment extends Component {
   componentWillMount(){
     this.loadBlockchainData()
   }
+ 
 
   async loadBlockchainData(){
     const network = await web3.eth.net.getNetworkType()

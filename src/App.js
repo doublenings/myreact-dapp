@@ -83,6 +83,7 @@ class App extends Component {
   openFiles = async (event) => {
     console.log('cilck me')
     
+    
   }
 
   // createList(ipfsHash){
@@ -97,9 +98,7 @@ class App extends Component {
               <div className="header-text">
                 <div className="row">
                   <div className="col-md-12 text-center">
-                    <h1 className="light white">1st International Conference</h1>
-                    <h2 className="white typed">On 1 May 2019 </h2>
-                    <h3 className="light white"> At Srinakharinwirot University </h3>
+            
                   </div>
                 </div>
               </div>
@@ -132,23 +131,24 @@ class App extends Component {
                 onChange={this.captureFile}
               />
               <Button
-                type="submit"  variant="success">
-                Send it
+                type="submit"  variant="primary">
+                Upload
              </Button>
             </Form> 
              {/* <button type="submit" className="btn-transaction" onClick={this.onClick}>Get Transaction</button> */}
              </div> 
-             <div className= "card-header">File is uploaded!</div>
+             <div className= "card-header">File</div>
              <div className="card-body">
           <ListGroup>  
             <ListGroup.Item><a href={`https://ipfs.io/ipfs/${this.state.ipfsHash}`}> {this.state.ipfsHash} </a></ListGroup.Item>
           </ListGroup>
+         
           </div>  
           </div>
           <br></br>
           
           <Comment />
-          <Button variant= "info" onShow={this.openFiles}>Comment:  {this.state.ipfsHash} </Button>
+         
           </div>
           <br />
         </div>
