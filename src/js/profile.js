@@ -173,7 +173,7 @@ class profile extends Component {
         			</div>
 	            <div className="post-preview">
           			<a href="/">
-            			<h4 className="post-title">เพราะเหตุใดจึงไม่สามารถอัพโหลดบทความวิจัยได้?</h4>
+            			<h4 className="post-title">เพราะเหตุใดจึงไม่สามารถอัปโหลดบทความวิจัยได้?</h4>
           			</a>
           			<p className="post-meta">ต้องทำการเข้าสู่ระบบก่อนทุกครั้ง</p>
         			</div>	
