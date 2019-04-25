@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar,Nav } from 'react-bootstrap';
+import { Navbar,Nav,Form ,FormControl,Button} from 'react-bootstrap';
 import web3 from '../web3'
 import '../css/navbar.css'
 import logo from '../img/logo_transparent.png'
@@ -26,7 +26,7 @@ class Header extends Component {
     render() {
         return (
 <div>
-            <Navbar bg="navbar navbar-light bg-light" variant="navbar navbar-light bg-light">
+            <Navbar bg="light" variant="light">
                   <Navbar.Brand href="/"><img src ={logo} 
                    width="30"
                    height="30"
@@ -35,10 +35,9 @@ class Header extends Component {
       </Navbar.Brand>
              <Nav className="mr-auto">
                     <Nav.Link href="/profile">Home</Nav.Link>
-               
-               
                     <Nav.Link className="justify-content-end">Login as | {this.state.account} </Nav.Link>
                   </Nav>
+                   
                 </Navbar> 
                 
                 </div>

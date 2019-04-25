@@ -219,7 +219,7 @@ class profile extends Component {
         		<div className="col-lg-6">
           		<div className="testimonial-item mx-auto mb-5 mb-lg-0">
 							<img src={tamonwan} width="250" height="250"/>
-            		<h4>น.ส.ธมลวรรณ รังผึ้้ง</h4>
+            		<h4>น.ส.ธมลวรรณ รังผึ้ง</h4>
             		<p className="font-weight-light mb-0">Email : tamonwan.ning@g.swu.ac.th</p>
 								<p className="font-weight-light mb-0">Phone : 064-603-6289</p>
           		</div>

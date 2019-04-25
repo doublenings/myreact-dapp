@@ -28,7 +28,8 @@ class PostList extends Component {
               {this.props.tasks.map((task, key) => {
                 return (
                   <span className="taskTemplate" key={key}  >
-                    <ListGroup>{task.content}</ListGroup>
+                    <ListGroup>-> {task.content}
+                    </ListGroup>
                     
                    
 
