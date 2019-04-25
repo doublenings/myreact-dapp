@@ -111,7 +111,7 @@ class App extends Component {
             <div className="col-lg-12 col-md-12">
               <div className="card">
                 <div className="card-header">USER ACCOUNT</div>
-                <div className="card-body"> Login as {this.state.account}</div>
+                <div className="card-body"> Login as : {this.state.account}</div>
               </div>
             </div>
           </div>
