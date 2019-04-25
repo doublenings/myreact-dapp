@@ -173,7 +173,8 @@ header .typed-cursor {
 }
 /* Sections */
 section {
-	position: relative;
+  position: relative;
+  
 }
 
 .section {

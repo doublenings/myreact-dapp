@@ -12,9 +12,9 @@ class PostList extends Component {
           event.preventDefault()
           this.props.createTask(this.task.value)
         }}>
-          <h6>input: <Form.Control  id="newTask" ref={(input) => this.task = input}  type="text" className="form-control" /></h6>
+          <h6>Ipfs Hash : <Form.Control  id="newTask" ref={(input) => this.task = input}  type="text" className="form-control" /></h6>
           <br />
-          <h6>Comment:<Form.Control  as="textarea" id="newTask2" ref={(input) => this.task = input} type="text" className="form-control" /> </h6>
+          <h6>Comment :<Form.Control  as="textarea" id="newTask2" ref={(input) => this.task = input} type="text" className="form-control" /> </h6>
           <br />
           <Button
                 type="submit"  variant="success">

@@ -10,7 +10,7 @@ import {Button } from 'react-bootstrap'
 import line from './img/line.png';
 
 
-class App extends Component {
+export class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -137,7 +137,7 @@ class App extends Component {
             </Form> 
              {/* <button type="submit" className="btn-transaction" onClick={this.onClick}>Get Transaction</button> */}
              </div> 
-             <div className= "card-header">FILE</div>
+             <div className= "card-header">IPFS HASH</div>
              <div className="card-body">
           <ListGroup>  
             <ListGroup.Item><a href={`https://ipfs.io/ipfs/${this.state.ipfsHash}`}> {this.state.ipfsHash} </a></ListGroup.Item>
