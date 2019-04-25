@@ -9,6 +9,7 @@ import Comment from './js/comment'
 import {Button } from 'react-bootstrap'
 import line from './img/line.png';
 
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -98,19 +99,18 @@ class App extends Component {
               <div className="header-text">
                 <div className="row">
                   <div className="col-md-12 text-center">
-            
+                  <h2 className="light white">บล็อกเชน...เทคโนโลยีเปลี่ยนโลก</h2>
                   </div>
                 </div>
               </div>
        </div>
-       
        <div className= "bg-light gray-bg">
        <br />
         <div className="container">
           <div className="row">
             <div className="col-lg-12 col-md-12">
               <div className="card">
-                <div className="card-header">Step1 : Login for upload file</div>
+                <div className="card-header">USER ACCOUNT</div>
                 <div className="card-body"> Login as {this.state.account}</div>
               </div>
             </div>
@@ -118,7 +118,7 @@ class App extends Component {
   
          <br />
           <div className="card">
-        <div className="card-header">Step:2 Upload files</div>
+        <div className="card-header">UPLOAD FILES</div>
         <div className="card-body">
         <div className="upload-file">
   {/* <ResponsiveEmbed aspect="1by1">
@@ -137,7 +137,7 @@ class App extends Component {
             </Form> 
              {/* <button type="submit" className="btn-transaction" onClick={this.onClick}>Get Transaction</button> */}
              </div> 
-             <div className= "card-header">File</div>
+             <div className= "card-header">FILE</div>
              <div className="card-body">
           <ListGroup>  
             <ListGroup.Item><a href={`https://ipfs.io/ipfs/${this.state.ipfsHash}`}> {this.state.ipfsHash} </a></ListGroup.Item>

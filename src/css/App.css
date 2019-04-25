@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
-@import url(https://fonts.googleapis.com/css?family=Kodchasan);
+@import url(https://fonts.googleapis.com/css?family=Sarabun:400,700);
 body {
-	font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto','Saraban', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	overflow-x: hidden;
 	color: #2a3237;
@@ -23,14 +23,27 @@ p {
 	height: 400px;
 	background: url('../img/block1.png');
 	background-size: cover;
-	
-   
-    
 }
-#header-upload h1 {
-padding-top: 50px;
-color: #1A237E;
-font-family: 'Kodchasan', sans-serif;
+#header-upload h2 {
+padding-top: 100px;;
+color: whitesmoke;
+/* font-family: 'Kodchasan', sans-serif; */
+font-family: 'Sarabun', sans-serif;
+
+}
+/* Card */
+.card{
+	font-size: 16px;
+	font-family: 'Sarabun', sans-serif;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	font-weight: bold
+}
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+.card-header{
+	border-bottom: #4caf50;
 }
 /* Footer */
 

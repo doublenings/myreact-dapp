@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 @import url(https://fonts.googleapis.com/css?family=Kodchasan);
+@import url(https://fonts.googleapis.com/css?family=Sarabun:400,700);
 body {
-	font-family: 'Roboto', 'Kodchasan', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto','Sarabun' ,'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	overflow-x: hidden;
 	color: #2a3237;
@@ -20,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Roboto', 'Kodchasan', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: 'Roboto','Sarabun' ,'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	position: relative;
   margin: 10px 0;
   
@@ -88,25 +89,28 @@ header {
 
 #intro h2 {
   color: #1A237E;
-  font-family: 'Kodchasan', sans-serif;
+  /* font-family: 'Kodchasan', sans-serif; */
   font-size: 56px;
   font-weight: 600;
   text-transform: uppercase;
+  font-family: 'Sarabun', sans-serif;
 }
 
 #intro h3 {
   color:black;
-  font-family: 'Kodchasan', sans-serif;
+  /* font-family: 'Kodchasan', sans-serif; */
   font-size: 40px;
   font-weight: 600;
   text-transform: uppercase;
+  font-family: 'Sarabun', sans-serif;
 }
 
 #intro h4 {
   color: black;
-  font-family: 'Kodchasan', sans-serif;
+  /* font-family: 'Kodchasan', sans-serif; */
   font-size: 28px;
   font-weight: 600;
+  font-family: 'Sarabun', sans-serif;
 }
 
 #btn-upload {

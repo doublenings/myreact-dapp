@@ -71,7 +71,7 @@ class comment extends Component {
   render() {
     return (
       <div className="card">
-      <div className="card-header">Step3 : Review file</div>
+      <div className="card-header">COMMENTS</div>
         <div className="card-body">
           { this.state.loading 
           ?<div id="loader" className="text-center">

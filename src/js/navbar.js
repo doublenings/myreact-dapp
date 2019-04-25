@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Navbar,Nav } from 'react-bootstrap';
 import web3 from '../web3'
 import '../css/navbar.css'
+import logo from '../img/logo_transparent.png'
 
 
 
@@ -26,7 +27,12 @@ class Header extends Component {
         return (
 <div>
             <Navbar bg="navbar navbar-light bg-light" variant="navbar navbar-light bg-light">
-                  <Navbar.Brand href="/">Conference</Navbar.Brand>
+                  <Navbar.Brand href="/"><img src ={logo} 
+                   width="30"
+                   height="30"
+                   className="d-inline-block align-top"
+                   alt="React Bootstrap logo"/>
+      </Navbar.Brand>
              <Nav className="mr-auto">
                     <Nav.Link href="/profile">Home</Nav.Link>
                

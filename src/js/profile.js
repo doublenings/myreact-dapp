@@ -171,27 +171,25 @@ class profile extends Component {
           			<p className="post-meta">สามารถเข้าสู่ระบบผ่าน MetaMask หากสามารถเข้าสู่ระบบได้สำเร็จจะสามารถเห็น Account 
 								ที่ใช้งานบนแถบเมนู หากไม่เห็นให้ตรวจสอบการเชื่อมต่อ MetaMask อีกครั้ง</p>
         			</div>
-
+	            <div className="post-preview">
+          			<a href="/">
+            			<h4 className="post-title">ทำไมไม่สามารถอัพโหลดบทความวิจัยได้?</h4>
+          			</a>
+          			<p className="post-meta">ต้องทำการเข้าสู่ระบบก่อนทุกครั้ง</p>
+        			</div>	
+							<div className="post-preview">
+          			<a href="/">
+            			<h4 className="post-title">สกุลไฟล์ในการอัพโหลดบทความวิจัย?</h4>
+          			</a>
+          			<p className="post-meta">สกุลไฟล์ที่ใช้คือ pdf และเมื่ออัพโหลดเรียบร้อยแล้ว คุณยังสามารถดูบทความที่คุณอัพโหลดได้ที่ คอลัมน์ที่ชื่อว่า File</p>
+        			</div>
 							<div className="post-preview">
           			<a href="/">
             			<h4 className="post-title">จัดงานที่มหาวิทยาลัยศรีนครินทรวิโรฒ วิทยาเขตใด?</h4>
           			</a>
           			<p className="post-meta">มหาวิทยาลัยศรีนครินทรวิโรฒ วิทยาเขตประสานมิตร (อโศก) กรุงเทพฯ</p>
         			</div>
-
-							<div className="post-preview">
-          			<a href="/">
-            			<h4 className="post-title">Man must explore, and this is exploration at its greatest</h4>
-          			</a>
-          			<p className="post-meta">Posted by on September 24, 2019</p>
-        			</div>
-
-							<div className="post-preview">
-          			<a href="/">
-            			<h4 className="post-title">Man must explore, and this is exploration at its greatest</h4>
-          			</a>
-          			<p className="post-meta">Posted by on September 24, 2019</p>
-        			</div>
+						
         
 							
         

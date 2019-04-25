@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "dotenv": "^7.0.0",
     "fs-extra": "^7.0.1",
     "ipfs-api": "^26.1.2",
     "jquery": "^3.4.0",
@@ -14,6 +15,7 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "truffle-contract": "^4.0.11",
+    "truffle-hdwallet-provider": "^1.0.8",
     "typescript": "^3.4.1",
     "web3": "^1.0.0-beta.51"
   },
