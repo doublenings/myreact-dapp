@@ -7,20 +7,18 @@ class PostList extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="card-body">
         <Form onSubmit={(event) => {
           event.preventDefault()
           this.props.createTask(this.task.value)
         }}>
-          <h6>Ipfs Hash : <Form.Control  id="newTask" ref={(input) => this.task = input}  type="text" className="form-control" /></h6>
-          <br />
-          <h6>Comment :<Form.Control  as="textarea" id="newTask2" ref={(input) => this.task = input} type="text" className="form-control" /> </h6>
+          <h6>Research Article Name : <Form.Control id="newTask" ref={(input) => this.task = input}  type="text" className="form-control" /></h6>
+          <h6>Abstracts : <Form.Control as="textarea" id="newTask2" ref={(input) => this.task = input}  type="text" className="form-control" /></h6>
           <br />
           <Button
                 type="submit"  variant="success">
                 Post
              </Button>
-          
         </Form>
         <div className='card'>
           <div className='card-body'>

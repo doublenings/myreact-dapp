@@ -57,22 +57,12 @@ class comment extends Component {
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
     })
-    
-    
-    
-    
   }
-
- 
-
-  
-
-
   render() {
     return (
       <div className="card">
-      <div className="card-header">COMMENTS</div>
-        <div className="card-body">
+      <div className="card-header">ABSTRACTS</div>
+        
           { this.state.loading 
           ?<div id="loader" className="text-center">
             <p className="text-center">Loading...</p>
@@ -83,7 +73,7 @@ class comment extends Component {
              
              />  }
         </div>
-        </div>
+      
 
     )
   }

@@ -115,7 +115,8 @@ export class App extends Component {
               </div>
             </div>
           </div>
-  
+          <br />
+          <Comment />
          <br />
           <div className="card">
         <div className="card-header">UPLOAD FILES</div>
@@ -147,7 +148,7 @@ export class App extends Component {
           </div>
           <br></br>
           
-          <Comment />
+        
          
           </div>
           <br />
